@@ -1,0 +1,22 @@
+{% extends 'recibos/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h1 class="card-title">Bienvenido a la página de inicio</h1>
+                        <p>Explora las siguientes páginas:</p>
+                        <ul>
+                            <li><a href="{% url 'recibo_list' %}">Lista de recibos</a></li>
+                            <li><a href="{% url 'recibo_create' %}">Crear un nuevo recibo</a></li>
+                            <li><a href="{% url 'recibo_update' pk=recibo.id %}">Editar recibo</a></li>
+                            <li><a href="{% url 'recibo_delete' recibo.id %}">Eliminar recibo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

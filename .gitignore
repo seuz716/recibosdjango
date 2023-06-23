@@ -1,0 +1,17 @@
+# Ignorar archivos generados por el entorno de desarrollo
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos de configuración sensibles
+settings.ini
+
+# Ignorar directorios y archivos específicos
+directorio_secreto/
+archivo_secreto.txt
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar carpeta del entorno virtual
+venv/
