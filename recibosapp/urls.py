@@ -9,6 +9,7 @@ from recibos.views import (
     recibo_create,
     recibo_update,
     recibo_delete,
+    recibo_pdf
 )
 
 urlpatterns = [
@@ -16,6 +17,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('recibos/', recibo_list, name='recibo_list'),
     path('recibos/nuevo/', recibo_create, name='recibo_create'),
+     path('recibo/<int:pk>/pdf/', recibo_pdf, name='recibo_pdf'),
     path('recibos/<int:pk>/', recibo_detail, name='recibo_detail'),
     path('recibos/<int:pk>/editar/', recibo_update, name='recibo_update'),
     path('recibos/<int:pk>/eliminar/', recibo_delete, name='recibo_delete'),
@@ -23,3 +25,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

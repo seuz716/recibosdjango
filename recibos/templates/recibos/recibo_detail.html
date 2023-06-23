@@ -53,6 +53,8 @@
           <p class="card-text">{{ recibo.descripcion }}</p>
           <p class="card-text">{{ recibo.monto }}</p>
         </div>
+        
+          <a href="{% url 'recibo_pdf' recibo.pk %}" class="btn btn-success mt-3 fade-in">Descargar PDF</a>
       </div>
 
       <a href="{% url 'recibo_update' recibo.pk %}" class="btn btn-primary mt-3 fade-in">Editar</a>
